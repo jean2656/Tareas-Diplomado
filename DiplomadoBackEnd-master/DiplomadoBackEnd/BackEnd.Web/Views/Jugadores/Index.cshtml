@@ -1,0 +1,91 @@
+﻿@model IEnumerable<BackEnd.Web.Models.Jugador>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listado Jugadores</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        h1 {
+            color: seagreen;
+        }
+
+        p {
+            color: cadetblue;
+        }
+
+        table {  color: #333; font-family: Helvetica, Arial, sans-serif; width: 640px; border-collapse: collapse;}
+
+         td, th { border: 2px solid transparent; height: 30px; }
+  
+          th { background: #00BFFF; font-weight: bold; }
+
+          td { background: #00BFFF; text-align: center; }
+
+          tr:nth-child(even) td { background: #F1F1F1; }  
+
+          tr:nth-child(odd) td { background: #00BFFF; } 
+
+          tr td:hover { background: #666; color: #FFF; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Listado de Jugadores</h1>
+        <table>
+            <tr>
+                <td>
+                    ID
+                </td>
+
+                <td>
+                    Nombre
+                </td>
+
+                <td>
+                    Apellidos
+                </td>
+
+                <td>
+                    Posicion
+                </td>
+
+                <td>
+                    Equipo
+                </td>
+
+                <td>
+                    
+                </td>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Apellidos</td>
+                    <td>@item.Posicion</td>
+                    <td>@item.Equipo</td>
+                    <td><a href="/Jugadores/Editar/@item.ID">Editar</a></td>
+                    <td><a href="/Jugadores/Eliminar/@item.ID">Eliminar</a></td>
+                </tr>
+            }
+
+        </table>
+        <br />
+        <br />
+        <a href="/Jugadores/Agregar">Agregar</a>
+
+    </div>
+</body>
+</html>

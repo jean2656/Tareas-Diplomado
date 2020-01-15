@@ -1,0 +1,40 @@
+﻿@model BackEnd.Web.Models.Jugador
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+    <div>
+        <h1>Registro de Jugadores</h1>
+        <form method="post" action="/Jugadores/Editar">
+            <input type="text" id="nombre" name="idJugador" value="@Model.ID" hidden />
+            <label>Nombre</label>
+            <br />
+            <input type="text" id="nombre" name="nombre" value="@Model.Nombre" />
+            @*@Html.EditorFor(model => model.Nombre)*@
+            <br />
+            <label>Apellidos</label>
+            <br />
+            <input type="text" id="apellidos" name="apellidos" value="@Model.Apellidos" />
+            <br />
+            <label>Poscion</label>
+            <br />
+            <input type="text" id="posicion" name="posicion" value="@Model.Posicion" />
+            <br />
+            <label>Equipo</label>
+            <br />
+            <input type="text" id="equipo" name="equipo" value="@Model.Equipo" />
+            <br />
+            <br />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>

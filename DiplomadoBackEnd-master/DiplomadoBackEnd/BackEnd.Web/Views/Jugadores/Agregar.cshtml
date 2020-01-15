@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .button {
+              width: 25%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+        .label {
+  color: white;
+  padding: 8px;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */
+.other {background-color: #e7e7e7; color: black;} /* Gray */
+
+
+input[type=text] {
+    width: 60%;
+    padding: 15px 15px;
+    margin: 10px 5px;
+    box-sizing: border-box;  
+}
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Agregar</title>
+</head>
+<body>
+    <div>
+        <h1>Registro de Jugadores</h1>
+
+        @*El hacer POST se ejecutar la accion definida en action.*@
+
+        <form method="post" action="/Jugadores/Agregar">
+            <label class="label info" >Nombre</label>
+            <br /><br />
+            <input type="text" id="nombre" name="nombre" />
+            <br /><br />
+            <label class="label info" >Apellidos</label>
+            <br /><br />
+            <input type="text" id="apellidos" name="apellidos" />
+            <br /><br />
+            <label class="label info" >Posción</label>
+            <br /><br />
+            <input type="text" id="posicion" name="posicion" />
+            <br /><br />
+            <label class="label info" >Equipo</label>
+            <br /><br />
+            <input type="text" id="equipo" name="equipo" />
+            <br />
+            <br />
+            <button type="submit" class="button" >Guardar</button>
+        </form>
+
+    </div>
+</body>
+</html>

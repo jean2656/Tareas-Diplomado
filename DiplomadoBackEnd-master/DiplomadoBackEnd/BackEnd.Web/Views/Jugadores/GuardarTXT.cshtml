@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GuardarTXT</title>
+</head>
+<body>
+    <div>
+        <h1>Registro de Jugadores</h1>
+
+        @*El hacer POST se ejecutar la accion definida en action.*@
+
+        <form method="post" action="/Jugadores/GuardarTXT">
+            <label>Nombre</label>
+            <br />
+            <input type="text" id="nombre" name="nombre" />
+            <br />
+            <label>Apellidos</label>
+            <br />
+            <input type="text" id="apellidos" name="apellidos" />
+            <br />
+            <label>Posción</label>
+            <br />
+            <input type="text" id="posicion" name="posicion" />
+            <br />
+            <label>Equipo</label>
+            <br />
+            <input type="text" id="equipo" name="equipo" />
+            <br />
+            <br />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>

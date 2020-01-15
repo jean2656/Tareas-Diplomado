@@ -1,0 +1,3 @@
+Nombre: Nelson <br> Apellidos: Cruz <br> Equipo: MIN <hr>
+Nombre: ROBINSON <br> Apellidos: CANO <br> Equipo: METS <hr>
+Nombre: DAVID <br> Apellidos: ORTIZ <br> Equipo: BOS <hr>
